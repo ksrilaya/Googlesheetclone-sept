@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheet Clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="menus.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="page-actions-cont">
+        <div class="page-action">File</div>
+        <div class="page-action selected-page-action">Home</div>
+        <div class="page-action">Insert</div>
+        <div class="page-action">Layout</div>
+        <div class="page-action">Help</div>
+    </div>
+    
+    <div id="options">
+      <div class="menus">
+        <span class="material-icons copy">
+            content_copy
+        </span>
+        <span class="material-icons cut">
+            content_cut
+        </span>
+        <span class="material-icons paste">
+            content_paste
+        </span>
+        <select class="font-family-prop">
+            <option value="monospace">MonoSpace</option>
+            <option value="sans-serif">Sans-serif</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="cursive">Cursive</option>
+        </select>
+        <span>
+        <select class="font-size-prop">
+            <option value="14">14</option>
+            <option value="16">16</option>
+            <option value="18">18</option>
+            <option value="20">20</option>
+        </select></span>
+        <div id="bold" onclick="onClickBold(this)">B</div>
+        <div id="italic" onclick="onClickItalic(this)">I</div>
+        <div id="underlined" onclick="onClickUnderline(this)">U</div>
+
+        <div
+          class="material-icons active-option text-align"
+          data-value="start"
+          onclick="onClickTextAlign(this)"
+        >
+          format_align_left
+        </div>
+        <div
+          class="material-icons text-align"
+          data-value="right"
+          onclick="onClickTextAlign(this)"
+        >
+          format_align_right
+        </div>
+        <div
+          class="material-icons text-align"
+          data-value="center"
+          onclick="onClickTextAlign(this)"
+        >
+          format_align_center
+        </div>
+
+        <div id="text-color">
+          <label for="color-picker"
+            ><span class="material-icons"> border_color </span></label
+          >
+          <input
+            onchange="onChangeTextColor(this)"
+            type="color"
+            id="color-picker"
+            style="width: 0; height: 0"
+          />
+        </div>
+
+        <div id="bg-color">
+          <label for="bgcolor-picker"
+            ><span class="material-icons"> format_color_fill </span></label
+          >
+          <input
+            onchange="onChangeBackgroundColor(this)"
+            type="color"
+            id="bgcolor-picker"
+            style="width: 0; height: 0"
+          />
+        </div>
+        <span class="material-icons download">
+            cloud_download
+        </span>
+        <span class="material-icons open">
+            cloud_upload
+        </span>
+      </div>
+
+      <span id="active-cell">null</span>
+      <span>
+      <img class="formula-icon" src="https://img.icons8.com/ios/50/000000/formula-fx.png" height="15px" width="15px">
+      <span><input type="text" class="formula-bar"></span></span>
+    </div>
+
+    <main style="width: 100vw; margin: auto; height: 100vh; overflow: scroll">
+      <div id="header">
+        <b style="position: sticky; left: 0; top: 0; background-color: white"
+          >S.No</b
+        >
+      </div>
+      <section id="body"></section>
+    </main>
+    <script src="./options.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

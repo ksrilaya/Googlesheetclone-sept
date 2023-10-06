@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+.page-actions-cont {
+    height: 3rem;
+    background-color: #218c74;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 1rem;
+}
+.selected-page-action {
+   color: #218c74 !important;
+   background-color: white;
+}
+.page-action {
+    width: 3.5rem;
+    height: 2rem;
+    text-align: center;
+    color: #f1f2f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    width: fit-content;
+    background-color: #fff;
+    z-index: 100;
+    flex-direction: row;
+  }
+  #header > b {
+    padding: 10px 0;
+    text-align: center;
+    min-width: 100px;
+    border: 1px solid #dfe4e9;
+  }
+  .row {
+    display: flex;
+  }
+  .row > b,
+  .row > div {
+    padding: 10px 0;
+    min-width: 100px;
+    border: 1px solid #dfe4e9;
+  }
+  
+  .row > b:first-child {
+    text-align: center;
+  }
+  
+  .row > b:first-child {
+    background-color: #fff;
+    position: sticky;
+    left: 0;
+  }
+  
+  #options {
+    padding: 10px;
+    background-color: #ecf0f1;
+    flex-direction: row;
+    
+  }
+  
+  #active-cell {
+    background-color: white;
+    padding: 2px 20px;
+  }
+  
+  #body {
+    width: fit-content;
+  }
+  .formula-icon {
+    width: 1.2rem;
+}
+
+.formula-bar {
+    width: calc( 90vw - 5rem - 0.7rem - 0.7rem - 0.7rem);
+}
